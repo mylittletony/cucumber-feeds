@@ -21,7 +21,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/socketman
 SECTION:=net
 CATEGORY:=Network
-DEPENDS:=+libjson-c +curl +libcurl +libopenssl +libpthread +libmosquitto +@LIBCURL_OPENSSL +libc +libnl
+DEPENDS:=+zlib +libjson-c +curl +libcurl +libopenssl +libpthread +libmosquitto +@LIBCURL_OPENSSL +libc +libnl
 TITLE:=SocketMan communication package for Cucumber Tony
 URL:=http://www.cucumberwifi.io
 endef
