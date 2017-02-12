@@ -3,18 +3,17 @@
 # This is free software, licensed under the GNU General Public License v2.
 
 export CT_ARCH="-D__OPENWRT__"
-export CT_VERSION=0d94378
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=SocketMan
 PKG_MAINTAINER:=Andrew Margarit <andrew@cucumberwifi.io>
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_VERSION:=0d94378beb0b2b36c81ef3ceb5cb142f0d389383
+PKG_SOURCE_VERSION:=02dabd47aa5297db19c9e1d1ef716d2e2a4b772b
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)
 PKG_SOURCE_URL:=https://github.com/cucumber-tony/SocketMan.git
 PKG_SOURCE:=$(PKG_NAME).tar.gz
-PKG_VERSION:=$(CT_VERSION)
+PKG_VERSION:=170212_02da
 
 include $(INCLUDE_DIR)/package.mk
 
