@@ -9,11 +9,11 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=SocketMan
 PKG_MAINTAINER:=Andrew Margarit <andrew@cucumberwifi.io>
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_VERSION:=02dabd47aa5297db19c9e1d1ef716d2e2a4b772b
+PKG_SOURCE_VERSION:=298c2dfab6bf6ba44a5d40523b69b44f0acd1f46
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)
 PKG_SOURCE_URL:=https://github.com/cucumber-tony/SocketMan.git
 PKG_SOURCE:=$(PKG_NAME).tar.gz
-PKG_VERSION:=170212_02da
+PKG_VERSION:=170215_298c
 
 include $(INCLUDE_DIR)/package.mk
 
