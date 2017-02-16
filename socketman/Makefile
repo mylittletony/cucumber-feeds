@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=SocketMan
 PKG_MAINTAINER:=Andrew Margarit <andrew@cucumberwifi.io>
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_VERSION:=298c2dfab6bf6ba44a5d40523b69b44f0acd1f46
+PKG_SOURCE_VERSION:=1b694cf1c85079d8c508178636d25682e8b45254
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)
 PKG_SOURCE_URL:=https://github.com/cucumber-tony/SocketMan.git
 PKG_SOURCE:=$(PKG_NAME).tar.gz
