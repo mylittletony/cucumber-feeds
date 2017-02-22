@@ -47,10 +47,10 @@ station data and sends securely to your API.
 endef
 
 define Package/socketman/install
-        $(INSTALL_DIR) $(1)/usr/bin
-        $(CP) $(PKG_BUILD_BIN)/socketman $(1)/usr/bin/socketman
-        $(INSTALL_DIR) $(1)/etc/init.d
-        $(INSTALL_BIN) files/socketman.init $(1)/etc/init.d/socketman
+  $(INSTALL_DIR) $(1)/usr/bin
+  $(CP) $(PKG_BUILD_BIN)/socketman $(1)/usr/bin/socketman
+  $(INSTALL_DIR) $(1)/etc/init.d
+  $(INSTALL_BIN) files/socketman.init $(1)/etc/init.d/socketman
 endef
 
 $(eval $(call BuildPackage,socketman))
