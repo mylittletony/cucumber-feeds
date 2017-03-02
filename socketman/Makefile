@@ -33,17 +33,13 @@ URL:=http://www.cucumberwifi.io
 endef
 
 define Package/socketman/description
-
-  SocketMan is used at Cucumber Tony to control any of the OpenWRT access points, 
+	SocketMan is used at Cucumber Tony to control any of the OpenWRT access points, 
 routers and other devices. It's fully customisable so you can provision against 
 your own backend and transmit jobs securely (currently via MQTT).
-
-  The daemon will monitor your network and attempt recovery when necessary. 
+	The daemon will monitor your network and attempt recovery when necessary. 
 It will processes inbound jobs and notify of failures. Finally, it collects 
 station data and sends securely to your API.
-
-  Use out of the box with Cucumber Tony or with your own system.
-
+	Use out of the box with Cucumber Tony or with your own system.
 endef
 
 define Package/socketman/install
