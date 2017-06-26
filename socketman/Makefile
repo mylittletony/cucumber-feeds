@@ -1,11 +1,11 @@
-# Copyright (C) 2016 Cucumber WiFi
+# Copyright (C) 2017 Cucumber WiFi
 #
 # This is free software, licensed under the GNU General Public License v2.
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=SocketMan
-PKG_VERSION:=170512_077c
+PKG_VERSION:=170620_5e48
 PKG_MAINTAINER:=Andrew Margarit <andrew@cucumberwifi.io>
 PKG_LICENSE:=GPL-2.0
 PKG_LICENSE_FILES:=LICENSE
@@ -13,7 +13,7 @@ PKG_LICENSE_FILES:=LICENSE
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/cucumber-tony/SocketMan.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_VERSION:=077c5c2f86a320c2347533ca4ee92c75aad488a1
+PKG_SOURCE_VERSION:=2014b5de5dd62f90a27ab043105097493c605e48
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 #PKG_MD5SUM=2f1fdf74cbdf04782bd5587fdbacfe47
 #PKG_HASH=f6e003431375fb40672b7a6f348efa6b2e724d562706422d7ec1c678549f1882
