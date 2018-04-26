@@ -5,15 +5,15 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=SocketMan
-PKG_VERSION:=180109_4483
-PKG_MAINTAINER:=Andrew Margarit <andrew@cucumberwifi.io>
+PKG_VERSION:=180426_e51e
+PKG_MAINTAINER:=Slow Lee<slow-lee@cucumberwifi.io>
 PKG_LICENSE:=GPL-2.0
 PKG_LICENSE_FILES:=LICENSE
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/cucumber-tony/SocketMan.git
+PKG_SOURCE_URL:=https://github.com/mylittletony/SocketMan.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_VERSION:=4483f7fee18a8051e37dd4eed81034d1a10e208d
+PKG_SOURCE_VERSION:=e51eb0cdd0cee772979a1ee304c36c3f2fc598c5
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 #PKG_MD5SUM=2f1fdf74cbdf04782bd5587fdbacfe47
 #PKG_HASH=f6e003431375fb40672b7a6f348efa6b2e724d562706422d7ec1c678549f1882
