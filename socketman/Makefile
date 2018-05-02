@@ -32,12 +32,12 @@ define Package/socketman
 endef
 
 define Build/Prepare
-        mkdir -p $(PKG_BUILD_DIR)
-        mkdir -p $(PKG_BUILD_DIR)/build
-        mkdir -p $(PKG_BUILD_DIR)/obj
-        tar -C $(DL_DIR) -xzvf $(DL_DIR)/$(PKG_NAME)-$(PKG_VERSION).tar.gz
-        $(CP) $(DL_DIR)/$(PKG_NAME)-$(PKG_VERSION)/src/* $(PKG_BUILD_DIR)/
-        sed -i -e "s/compiled-sm-version/$(PKG_SOURCE_VERSION)/g" $(PKG_BUILD_DIR)/version.c
+	mkdir -p $(PKG_BUILD_DIR)
+	mkdir -p $(PKG_BUILD_DIR)/build
+	mkdir -p $(PKG_BUILD_DIR)/obj
+	tar -C $(DL_DIR) -xzvf $(DL_DIR)/$(PKG_NAME)-$(PKG_VERSION).tar.gz
+	$(CP) $(DL_DIR)/$(PKG_NAME)-$(PKG_VERSION)/src/* $(PKG_BUILD_DIR)/
+	sed -i -e "s/compiled-sm-version/$(PKG_SOURCE_VERSION)/g" $(PKG_BUILD_DIR)/version.c
 endef
 
 define Package/socketman/description
