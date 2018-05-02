@@ -5,7 +5,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=SocketMan
-PKG_VERSION:=180430_3a827
+PKG_VERSION:=180430_6bc33
 PKG_MAINTAINER:=Slow Lee<slow-lee@cucumberwifi.io>
 PKG_LICENSE:=GPL-2.0
 PKG_LICENSE_FILES:=LICENSE
@@ -13,23 +13,31 @@ PKG_LICENSE_FILES:=LICENSE
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/mylittletony/SocketMan.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_VERSION:=c8f5dfc5e2c2ffb5b37b6b0e3eef37ac32c59319
+PKG_SOURCE_VERSION:=6bc33cda471c371c544911fe8fde957dd6d0f2ae
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 
 include $(INCLUDE_DIR)/package.mk
 
 MAKE_VARS += CT_ARCH="-D__OPENWRT__"
-MAKE_VARS+=CT_TEST="-DCT_VERSION='xxxxxxxxxxxxxxxxtestxxxxxxxxxxxxxxxxxxxxxx'"
 
 MAKE_PATH:=src
 PKG_BUILD_BIN:=$(PKG_BUILD_DIR)/$(MAKE_PATH)/
 
 define Package/socketman
-SECTION:=net
-CATEGORY:=Network
-DEPENDS:=+zlib +libjson-c +curl +libcurl +libopenssl +libpthread +libmosquitto +libc +libnl
-TITLE:=SocketMan communication package for Cucumber Tony
-URL:=http://www.cucumberwifi.io
+	SECTION:=net
+	CATEGORY:=Network
+	DEPENDS:=+zlib +libjson-c +curl +libcurl +libopenssl +libpthread +libmosquitto +libc +libnl
+	TITLE:=SocketMan communication package for Cucumber Tony
+	URL:=http://www.cucumberwifi.io
+endef
+
+define Build/Prepare
+        mkdir -p $(PKG_BUILD_DIR)
+        mkdir -p $(PKG_BUILD_DIR)/build
+        mkdir -p $(PKG_BUILD_DIR)/obj
+        tar -C $(DL_DIR) -xzvf $(DL_DIR)/$(PKG_NAME)-$(PKG_VERSION).tar.gz
+        $(CP) $(DL_DIR)/$(PKG_NAME)-$(PKG_VERSION)/src/* $(PKG_BUILD_DIR)/
+        sed -i -e "s/compiled-sm-version/$(PKG_SOURCE_VERSION)/g" $(PKG_BUILD_DIR)/version.c
 endef
 
 define Package/socketman/description
