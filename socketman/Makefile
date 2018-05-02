@@ -5,7 +5,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=SocketMan
-PKG_VERSION:=180430_6bc33
+PKG_VERSION:=180430_e5f24
 PKG_MAINTAINER:=Slow Lee<slow-lee@cucumberwifi.io>
 PKG_LICENSE:=GPL-2.0
 PKG_LICENSE_FILES:=LICENSE
@@ -13,7 +13,7 @@ PKG_LICENSE_FILES:=LICENSE
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/mylittletony/SocketMan.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_VERSION:=6bc33cda471c371c544911fe8fde957dd6d0f2ae
+PKG_SOURCE_VERSION:=e5f2437fed9340fc1ff3a66bd796afe075adb0cd
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 
 include $(INCLUDE_DIR)/package.mk
@@ -32,12 +32,8 @@ define Package/socketman
 endef
 
 define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
-	mkdir -p $(PKG_BUILD_DIR)/build
-	mkdir -p $(PKG_BUILD_DIR)/obj
-	tar -C $(DL_DIR) -xzvf $(DL_DIR)/$(PKG_NAME)-$(PKG_VERSION).tar.gz
-	$(CP) $(DL_DIR)/$(PKG_NAME)-$(PKG_VERSION)/src/* $(PKG_BUILD_DIR)/
-	sed -i -e "s/compiled-sm-version/$(PKG_SOURCE_VERSION)/g" $(PKG_BUILD_DIR)/version.c
+	$(Build/Prepare/Default)
+	sed -i -e "s/compiled-sm-version/$(PKG_SOURCE_VERSION)/g" $(PKG_BUILD_DIR)/src/version.c
 endef
 
 define Package/socketman/description
