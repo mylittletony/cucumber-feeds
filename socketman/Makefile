@@ -5,7 +5,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=SocketMan
-PKG_VERSION:=180430_c49af
+PKG_VERSION:=180513_c49af
 PKG_MAINTAINER:=Slow Lee<slow-lee@cucumberwifi.io>
 PKG_LICENSE:=GPL-2.0
 PKG_LICENSE_FILES:=LICENSE
